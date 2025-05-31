@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.10-slim-buster
 
 EXPOSE 8080
 
@@ -10,8 +10,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
- COPY . /app
+COPY . /app
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
+# Run flask app
 CMD [ "python","app.py" ]
