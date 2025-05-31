@@ -37,7 +37,7 @@ retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":
 
 
 # llm = OpenAI(temperature=0.4, max_tokens=500)
-
+# Added below for Groq
 llm = ChatGroq(
     temperature=0.4,
     model_name="llama3-8b-8192",  # mixtral-8x7b-32768 or llama3-8b-8192 / gemma-7b-it
