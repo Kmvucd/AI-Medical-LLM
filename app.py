@@ -43,8 +43,9 @@ llm = ChatGroq(
     model_name="llama3-8b-8192",  # mixtral-8x7b-32768 or llama3-8b-8192 / gemma-7b-it
     api_key=os.getenv("GROQ_API_KEY")
 )
+# prompt
 prompt = ChatPromptTemplate.from_messages(
-    [
+    [ 
         ("system", system_prompt),
         ("human", "{input}"),
     ]
